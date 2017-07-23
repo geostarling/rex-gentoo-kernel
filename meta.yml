@@ -1,0 +1,6 @@
+Name: Rex::Gentoo::Kernel
+Description: Gentoo Kernel module
+Author: Jiří Špaček spaceji3@fit.cvut.cz
+License: MIT
+PerlRequire:
+  - Term::ANSIColor
