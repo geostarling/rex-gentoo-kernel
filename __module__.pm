@@ -9,7 +9,6 @@ desc 'Compile and install Gentoo kernel';
 
 
 task 'setup', sub {
-  $DB::single = 1;
   pkg "gentoo-sources",
     ensure  => "present";
 
