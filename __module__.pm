@@ -7,13 +7,12 @@ use Term::ANSIColor;
 
 desc 'Compile and install Gentoo kernel';
 
-
 task 'setup', sub {
   pkg "gentoo-sources",
     ensure  => "present";
 
   file "/usr/src/linux/.config",
-    content => template("templates/config.tt"),
+    content => template("templates/usr/src/linux/config.tt"),
     on_change => sub {
       run "make",                 cwd => "/usr/src/linux", auto_die => TRUE;
       run "make modules_install", cwd => "/usr/src/linux", auto_die => TRUE;
